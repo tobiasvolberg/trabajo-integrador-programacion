@@ -98,3 +98,9 @@ img{
 left: 68%;
 top: 29%;
 }
+
+#botonLogIn{
+  position: absolute;
+  left: 69%;
+    top: 11%;
+}

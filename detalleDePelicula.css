@@ -1,0 +1,106 @@
+*{
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+.active-cyan-2 input[type=text]:focus:not([readonly]) {
+border-bottom: 1px solid #4dd0e1;
+box-shadow: 0 1px 0 0 #4dd0e1;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.LogIn{
+  position: absolute;
+  left: 73%;
+}
+
+input.form-control{
+  position: absolute;
+left: 80%;
+top: 11%;
+width: 19%;
+}
+.fa-search:before {
+    content: "\f002";
+    position: absolute;
+    left: 97%;
+    top: 28%;}
+
+    footer {
+      border-top: 1px solid gainsboro;
+      text-align: center;
+      height: 200px;
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+    }
+    footer ul {
+      margin: 50px 15%;
+      padding: 0;
+      overflow: hidden;
+    }
+    footer ul li {
+      float: left;
+      width: 25%;
+      padding: 10px 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    footer a {
+      text-decoration: none;
+    }
+    footer ul li {
+      list-style-type: none;
+    }
+    footer div {
+      margin-top: 50px;
+    }
+    main{
+      margin-top: 10%;
+    }
+
+li.li-menu{
+  color: white;
+  position: relative;
+}
+#julian{
+  left: 10%;
+}
+
+img{
+  height: 40px;
+  position: absolute;
+left: 68%;
+top: 29%;
+}
+
+#botonLogIn{
+  position: absolute;
+  left: 69%;
+    top: 11%;
+}

@@ -20,7 +20,9 @@ window.onload = function(){
       document.querySelector(".dropdown-menu").innerHTML += "<a class='dropdown-item' href=''>"+ generos[i].name +"</a"
     }
   })
-
+  .catch(function(error){
+    console.log("El error fue:" + error)
+  })
 
 
 }

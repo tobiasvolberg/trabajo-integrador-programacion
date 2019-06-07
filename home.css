@@ -58,9 +58,10 @@ width: 19%;
       bottom: 0;
       position: absolute;
       width: 100%;
+
     }
     footer ul {
-      margin: 50px 15%;
+
       padding: 0;
       overflow: hidden;
     }
@@ -95,8 +96,8 @@ li.li-menu{
 img{
   height: 40px;
   position: absolute;
-left: 68%;
-top: 29%;
+  left: 70%;
+  top: 4%;
 }
 
 #botonLogIn{

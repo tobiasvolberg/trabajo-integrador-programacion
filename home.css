@@ -151,11 +151,13 @@ section.primero{
 }
 
 h3.uk-margin-remove{
-  background-color: rgba(112, 112, 112, 0.8);
+  background-color: rgba(112, 112, 112, 0.6);
   background-size: auto;
 
 }
 
-p.uk-margin-remove{
+p.uk-margin-remove:hover{
   color: white;
+  background-color: rgba(112, 112, 112, 0.6);
+
 }

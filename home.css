@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+main{
+  background-color: white;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -123,4 +127,26 @@ li.li-menu{
   position: absolute;
   left: 69%;
     top: 11%;
+}
+
+#carruselhome {
+  float: left;
+  width: 27.5%;
+  margin-left: 4.375%;
+}
+
+#carruselhome2 {
+  float: left;
+  margin-left: 4.375%;
+  width: 27.5%;
+}
+
+#carruselhome3 {
+  float: left;
+  margin-left: 4.375%;
+  width: 27.5%;
+}
+
+section.primero{
+  overflow: hidden;
 }

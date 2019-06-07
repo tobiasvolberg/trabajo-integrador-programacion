@@ -10,21 +10,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
   </head>
   <body>
     <header>
       <ul>
-        <li>Home</li>
-        <li>
-          <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Generos
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  
-  </div>
-</div>
-        </li>
+        <li><a class="active" href="#Home">Home</a></li>
+        <li><a href="listadoDeGeneros.html">Generos</a></li>
         <li><a href="#Favoritos">Mis favoritos</a></li>
 
         <li>
@@ -79,6 +77,109 @@
       </section>
       <section class="primero">
 
+        <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: push; ratio: 2:3" id="carruselhome">
+
+    <ul class="uk-slideshow-items">
+
+        <li>
+            <img src="bp.jpg" alt="" uk-cover>
+            <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
+                <h3 class="uk-margin-remove">Bottom</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+
+        <li>
+            <img src="bp.jpg" alt="" uk-cover>
+            <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
+                <h3 class="uk-margin-remove">Bottom</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+
+
+    </ul>
+
+    <div class="uk-light">
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: push; ratio: 2:3" id="carruselhome2">
+
+<ul class="uk-slideshow-items">
+
+<li>
+    <img src="bp.jpg" alt="" uk-cover>
+    <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
+        <h3 class="uk-margin-remove">Bottom</h3>
+        <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</li>
+
+<li>
+    <img src="bp.jpg" alt="" uk-cover>
+    <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
+        <h3 class="uk-margin-remove">Bottom</h3>
+        <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</li>
+
+
+</ul>
+
+<div class="uk-light">
+<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="animation: push; ratio: 2:3" id="carruselhome3">
+
+<ul class="uk-slideshow-items">
+
+<li>
+    <img src="bp.jpg" alt="" uk-cover>
+    <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
+        <h3 class="uk-margin-remove">Bottom</h3>
+        <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</li>
+
+<li>
+    <img src="bp.jpg" alt="" uk-cover>
+    <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
+        <h3 class="uk-margin-remove">Bottom</h3>
+        <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</li>
+
+
+</ul>
+
+<div class="uk-light">
+<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+</div>
+
+</div>
+
+
       </section>
     </main>
     <footer>
@@ -93,5 +194,11 @@
   </body>
 </html>
 <script type="text/javascript"src="home.js">
+
+
+
+</script>
+
+<script type="text/javascript" src="js/uikit.min.js">
 
 </script>

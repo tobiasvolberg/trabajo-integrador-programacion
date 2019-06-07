@@ -149,3 +149,13 @@ li.li-menu{
 section.primero{
   overflow: hidden;
 }
+
+h3.uk-margin-remove{
+  background-color: rgba(112, 112, 112, 0.8);
+  background-size: auto;
+
+}
+
+p.uk-margin-remove{
+  color: white;
+}

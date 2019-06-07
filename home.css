@@ -55,7 +55,7 @@ width: 19%;
       border-top: 1px solid gainsboro;
       text-align: center;
       height: 200px;
-      bottom: 0;
+      bottom: -145px;
       position: absolute;
       width: 100%;
 
@@ -93,7 +93,7 @@ li.li-menu{
   left: 10%;
 }
 
-img{
+#logoTmdb{
   height: 40px;
   position: absolute;
   left: 70%;

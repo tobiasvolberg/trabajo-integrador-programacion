@@ -14,12 +14,25 @@ li {
   float: left;
 }
 
-li a {
+/* li a {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+} */
+header ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+header ul li{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
 }
 
 

@@ -56,5 +56,21 @@ window.onload = function(){
     console.log("El error fue:" + error)
   })
 
+  fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=e213b0057b8f5a50ca80f34e219debc4&language=en-US&page=1")
+  .then(function(respuesta) {
+    return respuesta.json()
+  })
+  .then(function(info) {
+    var titulo = info.results
+    console.log(titulo);
+
+    for (var i = 0; i < titulo.length; i++) {
+      document.querySelector("#carruselhome3 ul").innerHTML += '<li><img src="' +"https://image.tmdb.org/t/p/w500/" +titulo[i].poster_path +'" alt="" uk-cover><div class="uk-position-bottom uk-position-medium uk-text-center uk-light"><h3 class="uk-margin-remove">' + titulo[i].title + '</h3><p class="uk-margin-remove">'+titulo[i].overview+'</p></div></li>'
+    }
+  })
+  .catch(function(error){
+    console.log("El error fue:" + error)
+  })
+
 
 }

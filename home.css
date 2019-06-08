@@ -131,18 +131,18 @@ li.li-menu{
 #carruselhome {
   float: left;
   width: 27.5%;
-  margin-left: 5.83333333333333333333%;
+  margin-left: 4.375%;
 }
 
 #carruselhome2 {
   float: left;
-  margin-left: 5.83333333333333333333%;
+  margin-left: 4.375%;
   width: 27.5%;
 }
 
 #carruselhome3 {
   float: left;
-  margin-left: 5.83333333333333333334%;
+  margin-left: 4.375%;
   width: 27.5%;
 }
 
@@ -151,13 +151,11 @@ section.primero{
 }
 
 h3.uk-margin-remove{
-  background-color: rgba(112, 112, 112, 0.6);
+  background-color: rgba(112, 112, 112, 0.8);
   background-size: auto;
 
 }
 
-p.uk-margin-remove:hover{
+p.uk-margin-remove{
   color: white;
-  background-color: rgba(112, 112, 112, 0.6);
-
 }

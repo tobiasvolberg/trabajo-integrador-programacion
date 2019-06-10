@@ -17,7 +17,7 @@ window.onload = function(){
     var generos = info.genres
 
     for (var i = 0; i < generos.length; i++) {
-      document.querySelector(".dropdown-menu").innerHTML += "<a class='dropdown-item' href=''>"+ generos[i].name +"</a"
+      document.querySelector(".dropdown-menu").innerHTML += "<a class='dropdown-item' href=''>"+ generos[i].name +"</a>"
     }
   })
   .catch(function(error){

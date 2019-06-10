@@ -13,6 +13,11 @@ ul {
   display: flex;
   background-color: #333;
 }
+p.uk-margin-remove:hover{
+  color: white;
+  background-color: rgba(112, 112, 112, 0.6);
+
+} 
 
 li {
 }

@@ -50,11 +50,14 @@ border-bottom: 1px solid #4dd0e1;
 box-shadow: 0 1px 0 0 #4dd0e1;
 }
 
+header ul{
+  margin: 0;
+}
 header{
-  
+
   top: 0;
   width: 100%;
-  height: 8%;
+
 }
 .LogIn{
   position: absolute;
@@ -104,13 +107,33 @@ width: 19%;
       margin-top: 50px;
     }
     main{
-      margin-top: 4.8%;
-      height: 83.5vh;
+      margin-top: 100px;
+      height: 81vh;
     }
 
     ul.ul-menu {
       margin-bottom: 0;
     }
+
+    div.contenedorCarrousel{
+      overflow: hidden;
+    }
+
+
+    article.verticalText {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  float: left;
+  width: 10%;
+  padding-right: 8px;
+  text-align: center;
+    
+    height: 67%;
+}
+article.carrousel{
+  float: left;
+  width: 90%;
+}
 
 li.li-menu{
   color: white;

@@ -122,3 +122,9 @@ li.li-menu{
   left: 69%;
     top: 11%;
 }
+
+#carruselhome {
+  float: left;
+  width: 27.5%;
+  margin-left: 5.83333333%;
+}

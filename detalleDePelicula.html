@@ -3,18 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="detalleDePelicula.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  </head>
+
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
   <body>
-    <header>
+    <header class="fixed-top">
       <ul>
-        <li><a class="active" href="home.html">Home</a></li>
+        <li><a class="active" href="#Home">Home</a></li>
         <li>
           <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,8 +44,12 @@
         <!-- <li class="LogIn"><a href="#LogIn">Log in</a></li> -->
         <li>
           <div class="md-form active-cyan active-cyan-2 mb-3">
-          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-          </div><i class="fa fa-search"></i>
+            <form class="" action="resultadoDelBuscador.html" method="get">
+
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="buscador">
+          <button type="button"><i class="fa fa-search"></i></button>
+        </form>
+          </div>
         </li>
       </ul>
     </header>
@@ -78,7 +91,9 @@
         </div>
       </section>
       <section class="primero">
+        <ul class="detalles">
 
+        </ul>
       </section>
     </main>
     <footer>
@@ -92,6 +107,6 @@
 
   </body>
 </html>
-<script type="text/javascript"src="home.js">
+<script type="text/javascript"src="detalleDePelicula.js">
 
 </script>

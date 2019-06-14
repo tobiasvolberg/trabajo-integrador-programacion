@@ -188,3 +188,15 @@ h3.uk-margin-remove{
 p.uk-margin-remove{
   color: white;
 }
+
+#Nombre{
+  width: 80%;
+left: 17%;
+top: 8%;
+}
+
+#Email{
+  width: 80%;
+left: 17%;
+top: 36%;
+}

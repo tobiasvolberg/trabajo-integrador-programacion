@@ -128,3 +128,8 @@ li.li-menu{
   width: 27.5%;
   margin-left: 5.83333333%;
 }
+p.uk-margin-remove:hover{
+  color: white;
+  background-color: rgba(112, 112, 112, 0.6);
+
+}

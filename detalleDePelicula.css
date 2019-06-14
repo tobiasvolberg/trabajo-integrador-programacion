@@ -256,8 +256,11 @@ section.primero{
 }
 
 #spanspan{
-  left: 15%;
   position: absolute;
-left: 2%;
-z-index: 2;
+  left: 46%;
+  TOP: -4%;
+  z-index: 2;
+  BACKGROUND-COLOR: white;
+  color: black;
+  opacity: 2;
 }

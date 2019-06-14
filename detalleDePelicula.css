@@ -125,3 +125,48 @@ li.li-menu{
   left: 69%;
     top: 11%;
 }
+.imagenDetalleDePeli{
+  width: 26%;
+  position: absolute;
+  height: 76%;
+  float: left;
+  left: 1%;
+  top: 13%;
+  border: 4px solid #007bff;
+  border-radius: 10%;
+}
+
+.tituloDetalleDePeli{
+  float: left;
+    left: 28%;
+    top: 13%;
+    position: absolute;
+}
+.overviewDePeli{
+  float: left;
+  position: absolute;
+  left: 28%;
+  top: 17%;
+}
+.idiomaDePeli{
+  float: left;
+  position: absolute;
+  left: 28%;
+  top: 32%;
+}
+.generoDePeli{
+  position: absolute;
+  float: left;
+  left: 28%;
+  top: 36%;
+}
+.estrenoDePeli{
+  position: absolute;
+  float: left;
+  left: 28%;
+  top: 40%;
+}
+
+section.primero{
+  overflow: hidden;
+}

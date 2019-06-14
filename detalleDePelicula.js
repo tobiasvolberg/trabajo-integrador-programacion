@@ -23,8 +23,9 @@ window.addEventListener("load",function(){
   })
   .then(function(info) {
     var titulo = info
+    console.log(titulo);
 
-    document.querySelector(".detalles").innerHTML += "<li>"+titulo.title+"</li><li><img src='https://image.tmdb.org/t/p/w500/" + titulo.poster_path + "' alt=''></li>"
+    document.querySelector(".detalles").innerHTML += "<li class='tituloDetalleDePeli'>"+titulo.title+"</li><li><img class='imagenDetalleDePeli'src='https://image.tmdb.org/t/p/w500/" + titulo.poster_path + "' alt=''><li class='overviewDePeli'>"+ titulo.overview +"</li><li class='idiomaDePeli'>"+ "Idioma utilizado: "+titulo.original_language+"</li><li class='generoDePeli'>"+"Genero: "+titulo.genres.name+"</li><li class='estrenoDePeli'>"+"Fecha de estreno: "+titulo.release_date+"</li></li>"
   })
   .catch(function(error){
     console.log("El error fue:" + error)

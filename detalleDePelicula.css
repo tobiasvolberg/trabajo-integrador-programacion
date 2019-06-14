@@ -171,7 +171,7 @@ li.li-menu{
   left: 110%;
   top: 5%;
   position: absolute;
-} 
+}
 #myBtn{
   position: absolute;
   float: left;
@@ -233,8 +233,9 @@ section.primero{
 
 #botoncito{
   position: absolute;
-  top: 45%;
-  right: 59%;
+top: 52%;
+right: 46%;
+width: 26%;
 }
 #video{
   position: absolute;
@@ -269,4 +270,8 @@ section.primero{
   BACKGROUND-COLOR: white;
   color: black;
   opacity: 2;
+}
+
+#video{
+  
 }

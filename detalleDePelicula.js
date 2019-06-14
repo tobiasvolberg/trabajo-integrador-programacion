@@ -24,6 +24,8 @@ window.addEventListener("load",function(){
   .then(function(info) {
     var titulo = info
     console.log(titulo);
+    var generos = titulo.genres
+    console.log(generos);
 
     document.querySelector(".detalles").innerHTML += "<li class='tituloDetalleDePeli'>"+titulo.title+"</li><li><img class='imagenDetalleDePeli'src='https://image.tmdb.org/t/p/w500/" + titulo.poster_path + "' alt=''><li class='overviewDePeli'>"+ titulo.overview +"</li><li class='idiomaDePeli'>"+ "Idioma utilizado: "+titulo.original_language+"</li><li class='generoDePeli'>"+"Genero: "+titulo.genres.name+"</li><li class='estrenoDePeli'>"+"Fecha de estreno: "+titulo.release_date+"</li></li>"
   })
@@ -78,6 +80,18 @@ fetch("https://api.themoviedb.org/3/movie/" + query + "/recommendations?api_key=
 .catch(function(error){
   console.log("El error fue:" + error)
 })
+fetch("https://api.themoviedb.org/3/movie/"+query+"/videos?api_key=e213b0057b8f5a50ca80f34e219debc4&language=en-US")
+.then(function(respuesta) {
+  return respuesta.json()
+})
+.then(function(info) {
+  var titulo = info.results
+  var key = titulo[0].key
+  document.querySelector("iframe").src = "https://www.youtube.com/embed/"+key+""
 
+})
+.catch(function(error){
+  console.log("El error fue:" + error)
+})
 
 })

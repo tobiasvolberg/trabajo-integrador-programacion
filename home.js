@@ -87,3 +87,14 @@ window.onload = function(){
 
 
 }
+
+
+
+//LOGIN//
+
+var nombreDelUsuario = document.getElementById("Nombre").value
+console.log(nombreDelUsuario);
+var userName = ""
+localStorage.setItem("userName", nombreDelUsuario)
+console.log(userName);
+document.querySelector('#bienvenida').innerHTML = "<li id=bienvenida> Bienvenido, " + userName + "</li>"

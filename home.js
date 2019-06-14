@@ -31,11 +31,12 @@ window.onload = function(){
   })
   .then(function(info) {
     var titulo = info.results
-    console.log(titulo);
+
     var li =""
     for (var i = 0; i < titulo.length; i++) {
       li = "<li>"
-      li += "<a href='detalleDePelicula.html?id="+titulo.id+"'>"
+
+      li += "<a href='detalleDePelicula.html?id="+titulo[i].id+"'>"
       li += "<img src='https://image.tmdb.org/t/p/w500/" +titulo[i].poster_path +"'  uk-cover>"
       li += "<div class='uk-position-bottom uk-position-medium uk-text-center uk-light'>"
       li += "<h3 class='uk-margin-remove'>" + titulo[i].title + "</h3>"
@@ -45,7 +46,7 @@ window.onload = function(){
       li += "</li>"
 
       document.querySelector("#carruselhome ul").innerHTML += li
-    
+
 
     }
   })
@@ -59,7 +60,7 @@ window.onload = function(){
   })
   .then(function(info) {
     var titulo = info.results
-    console.log(titulo);
+
 
     for (var i = 0; i < titulo.length; i++) {
       document.querySelector("#carruselhome2 ul").innerHTML += '<li><img src="' +"https://image.tmdb.org/t/p/w500/" +titulo[i].poster_path +'" alt="" uk-cover><div class="uk-position-bottom uk-position-medium uk-text-center uk-light"><h3 class="uk-margin-remove">' + titulo[i].title + '</h3><p class="uk-margin-remove">'+titulo[i].overview+'</p></div></li>'
@@ -75,7 +76,6 @@ window.onload = function(){
   })
   .then(function(info) {
     var titulo = info.results
-    console.log(titulo);
 
     for (var i = 0; i < titulo.length; i++) {
       document.querySelector("#carruselhome3 ul").innerHTML += '<li><img src="' +"https://image.tmdb.org/t/p/w500/" +titulo[i].poster_path +'" alt="" uk-cover><div class="uk-position-bottom uk-position-medium uk-text-center uk-light"><h3 class="uk-margin-remove">' + titulo[i].title + '</h3><p class="uk-margin-remove">'+titulo[i].overview+'</p></div></li>'

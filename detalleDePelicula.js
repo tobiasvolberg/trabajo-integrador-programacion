@@ -22,8 +22,9 @@ window.addEventListener("load",function(){
     return respuesta.json()
   })
   .then(function(info) {
-    var titulo = info.results
-    document.querySelector(".detalles").innerHTML += "<li>"+titulo.title+"</li><li><img src='https://image.tmdb.org/t/p/w500/" + titulo[i].poster_path + "' alt=''></li>"
+    var titulo = info
+
+    document.querySelector(".detalles").innerHTML += "<li>"+titulo.title+"</li><li><img src='https://image.tmdb.org/t/p/w500/" + titulo.poster_path + "' alt=''></li>"
   })
   .catch(function(error){
     console.log("El error fue:" + error)

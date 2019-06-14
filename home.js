@@ -97,4 +97,16 @@ console.log(nombreDelUsuario);
 var userName = ""
 localStorage.setItem("userName", nombreDelUsuario)
 console.log(userName);
-document.querySelector('#bienvenida').innerHTML = "<li id=bienvenida> Bienvenido, " + userName + "</li>"
+if (userName == "") {
+
+}
+else {
+  document.querySelector('#bienvenida').innerHTML = "<li id=bienvenida> Bienvenido, " + userName + "</li>"
+}
+
+if (userName == "") {
+
+}
+else {
+  document.querySelector("busca").innerHTML.style.display = "none"
+}

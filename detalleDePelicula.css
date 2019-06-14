@@ -166,6 +166,12 @@ li.li-menu{
   left: 28%;
   top: 40%;
 }
+.buttonRecomendaciones{
+  position: absolute;
+  float: left;
+  left: 28%;
+  top: 44%;
+}
 
 section.primero{
   overflow: hidden;

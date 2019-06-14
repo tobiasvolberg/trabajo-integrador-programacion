@@ -133,3 +133,7 @@ p.uk-margin-remove:hover{
   background-color: rgba(112, 112, 112, 0.6);
 
 }
+.imagenesBuscador{
+  float: left;
+  width: 12%;
+}

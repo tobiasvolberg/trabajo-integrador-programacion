@@ -1,4 +1,19 @@
 window.onload = function(){
+  // Obtengo la info de local storage
+  var json = localStorage.getItem("gifsFavoritos")
+
+  // Si ya habia favoritos..
+  if (json != null) {
+    // Desempaquetar el string JSON
+    var objLit = JSON.parse(json)
+
+    // De todo el objeto literal me interesa EL ARRAY
+    var favoritos = objLit.carac
+
+  } else {
+    // Si no habia creo el listado como VACIO
+    var favoritos = []
+  }
   //jQuery
   $('#exampleModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal

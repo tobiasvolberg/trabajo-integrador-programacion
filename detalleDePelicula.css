@@ -229,3 +229,10 @@ section.primero{
   top: 45%;
   right: 59%;
 }
+#video{
+  position: absolute;
+  float: left;
+  left: 55%;
+  top: 40%;
+  width: 40%;
+}

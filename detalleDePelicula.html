@@ -95,17 +95,19 @@
 
         </ul>
 
-<button id="myBtn">Peliculas Similares</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalRecomendaciones" id="botonRecomendaciones">Ver recomendaciones</button>
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="modalRecomendaciones" class="modal">
 
 <!-- Modal content -->
-<div id="modalcarruseldetalle" class="modal-content">
-  <span class="close">&times;</span>
-  <div class="uk-position-relative uk-visible-toggle contenedorCarrousel" tabindex="-1" uk-slideshow="animation: push; ratio: 2:3" id="carruselDetalle">
-    <article class="carrousel">
-  <ul class="uk-slideshow-items">
+<div class="modal-content">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div class="uk-position-relative uk-visible-toggle contenedorCarrousel" tabindex="-1" uk-slideshow="animation: push; ratio: 3:2">
+    <article class="">
+  <ul class="uk-slideshow-items" id="testtest">
 
   </ul>
 

@@ -36,13 +36,14 @@ window.onload = function(){
     for (var i = 0; i < titulo.length; i++) {
       li = "<li>"
 
-      li += "<a href='detalleDePelicula.html?id="+titulo[i].id+"'>"
+
       li += "<img src='https://image.tmdb.org/t/p/w500/" +titulo[i].poster_path +"'  uk-cover>"
       li += "<div class='uk-position-bottom uk-position-medium uk-text-center uk-light'>"
+      li += "<a href='detalleDePelicula.html?id="+titulo[i].id+"'>"
       li += "<h3 class='uk-margin-remove'>" + titulo[i].title + "</h3>"
       li += "<p class='uk-margin-remove'>"+titulo[i].overview+"</p>"
-      li += "</div>"
       li += "</a>"
+      li += "</div>"
       li += "</li>"
 
       document.querySelector("#carruselhome ul").innerHTML += li
@@ -91,22 +92,22 @@ window.onload = function(){
 
 
 //LOGIN//
+document.querySelector("button.enviar-login").onclick = function() {
+  var nombreDelUsuario = document.getElementById("Nombre").value
+  console.log(nombreDelUsuario);
+  if (nombreDelUsuario == "") {
 
-var nombreDelUsuario = document.getElementById("Nombre").value
-console.log(nombreDelUsuario);
-var userName = ""
-localStorage.setItem("userName", nombreDelUsuario)
-console.log(userName);
-if (userName == "") {
+  }
+  else {
+    document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
+    document.querySelector(".close").click()
+
+    localStorage.setItem("userName", nombreDelUsuario)
+
+  }
 
 }
-else {
-  document.querySelector('#bienvenida').innerHTML = "<li id=bienvenida> Bienvenido, " + userName + "</li>"
-}
 
-if (userName == "") {
-
-}
-else {
-  document.querySelector("busca").innerHTML.style.display = "none"
+if (localStorage.getItem("userName") != null) {
+  document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + localStorage.getItem("userName")
 }

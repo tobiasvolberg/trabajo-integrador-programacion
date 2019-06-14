@@ -40,15 +40,6 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -68,16 +59,18 @@ fetch("https://api.themoviedb.org/3/movie/" + query + "/recommendations?api_key=
   for (var i = 0; i < titulo.length; i++) {
     li = "<li>"
 
-    li += "<a href='detalleDePelicula.html?id="+titulo[i].id+"'>"
+
     li += "<img src='https://image.tmdb.org/t/p/w500/" +titulo[i].backdrop_path +"'  uk-cover>"
     li += "<div class='uk-position-bottom uk-position-medium uk-text-center uk-light'>"
+    li += "<a href='detalleDePelicula.html?id="+titulo[i].id+"'>"
     li += "<h3 class='uk-margin-remove'>" + titulo[i].title + "</h3>"
     li += "<p class='uk-margin-remove'>"+titulo[i].overview+"</p>"
-    li += "</div>"
     li += "</a>"
+    li += "</div>"
+
     li += "</li>"
 
-    document.querySelector("#carruselDetalle").innerHTML += li
+    document.querySelector("#testtest").innerHTML += li
 
 
   }

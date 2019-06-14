@@ -26,8 +26,15 @@ window.addEventListener("load",function(){
     console.log(titulo);
     var generos = titulo.genres
     console.log(generos);
+    document.querySelector(".detalles").innerHTML += "<li class='tituloDetalleDePeli'>"+titulo.title+"</li><li><img class='imagenDetalleDePeli'src='https://image.tmdb.org/t/p/w500/" + titulo.poster_path + "' alt=''><li class='overviewDePeli'>"+ titulo.overview +"</li><li class='idiomaDePeli'>"+ "Idioma utilizado: "+titulo.original_language+"</li><li class='generoDePeli'>"+"Genero:<ul class='generosUl'></ul></li><li class='estrenoDePeli'>"+"Fecha de estreno: "+titulo.release_date+"</li></li>"
 
-    document.querySelector(".detalles").innerHTML += "<li class='tituloDetalleDePeli'>"+titulo.title+"</li><li><img class='imagenDetalleDePeli'src='https://image.tmdb.org/t/p/w500/" + titulo.poster_path + "' alt=''><li class='overviewDePeli'>"+ titulo.overview +"</li><li class='idiomaDePeli'>"+ "Idioma utilizado: "+titulo.original_language+"</li><li class='generoDePeli'>"+"Genero: "+titulo.genres.name+"</li><li class='estrenoDePeli'>"+"Fecha de estreno: "+titulo.release_date+"</li></li>"
+    li = "<li>"
+    for (var i = 0; i < generos.length; i++) {
+      li += generos[i].name + ", "
+    }
+    document.querySelector("li.generoDePeli ul").innerHTML += li
+    li += "</li>" 
+
   })
   .catch(function(error){
     console.log("El error fue:" + error)

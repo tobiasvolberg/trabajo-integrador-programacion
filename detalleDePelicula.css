@@ -158,14 +158,20 @@ li.li-menu{
   position: absolute;
   float: left;
   left: 28%;
-  top: 36%;
+  top: 40%;
 }
 .estrenoDePeli{
   position: absolute;
   float: left;
   left: 28%;
-  top: 40%;
+  top: 36%;
 }
+.generosUl{
+  background-color: white;
+  left: 110%;
+  top: 5%;
+  position: absolute;
+} 
 #myBtn{
   position: absolute;
   float: left;

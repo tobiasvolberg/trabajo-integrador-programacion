@@ -57,7 +57,34 @@ window.onclick = function(event) {
   }
 }
 
+fetch("https://api.themoviedb.org/3/movie/" + query + "/recommendations?api_key=e213b0057b8f5a50ca80f34e219debc4&language=en-US&page=1")
+.then(function(respuesta) {
+  return respuesta.json()
+})
+.then(function(info) {
+  var titulo = info.results
 
+  var li =""
+  for (var i = 0; i < titulo.length; i++) {
+    li = "<li>"
+
+    li += "<a href='detalleDePelicula.html?id="+titulo[i].id+"'>"
+    li += "<img src='https://image.tmdb.org/t/p/w500/" +titulo[i].backdrop_path +"'  uk-cover>"
+    li += "<div class='uk-position-bottom uk-position-medium uk-text-center uk-light'>"
+    li += "<h3 class='uk-margin-remove'>" + titulo[i].title + "</h3>"
+    li += "<p class='uk-margin-remove'>"+titulo[i].overview+"</p>"
+    li += "</div>"
+    li += "</a>"
+    li += "</li>"
+
+    document.querySelector("#carruselDetalle").innerHTML += li
+
+
+  }
+})
+.catch(function(error){
+  console.log("El error fue:" + error)
+})
 
 
 })

@@ -171,6 +171,8 @@ li.li-menu{
   float: left;
   left: 28%;
   top: 44%;
+  background-color: #007bff;
+  color: white;
 }
 
 section.primero{
@@ -218,5 +220,6 @@ section.primero{
 }
 
 #modalcarruseldetalle{
-  width: 85%
+  width: 85%;
+  bottom: 21%;
 }

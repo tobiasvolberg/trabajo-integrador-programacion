@@ -57,7 +57,7 @@ fetch("https://api.themoviedb.org/3/movie/" + query + "/recommendations?api_key=
 
   var li =""
   for (var i = 0; i < titulo.length; i++) {
-    li = "<li>"
+    li = "<li class='peli-recomendada'>"
 
 
     li += "<img src='https://image.tmdb.org/t/p/w500/" +titulo[i].backdrop_path +"'  uk-cover>"

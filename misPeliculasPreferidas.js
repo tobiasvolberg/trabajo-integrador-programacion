@@ -25,4 +25,19 @@ window.addEventListener("load",function(){
           document.querySelector("div").innerHTML += "<button idGif=" + id + " class='favorito'>Quitar de Favoritos</button><br>"
         }
 
+
+        fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=e213b0057b8f5a50ca80f34e219debc4&language=en-US")
+        .then(function(respuesta) {
+          return respuesta.json()
+        })
+        .then(function(info) {
+          var generos = info.genres
+
+          for (var i = 0; i < generos.length; i++) {
+            document.querySelector(".dropdown-menu").innerHTML += "<a class='dropdown-item' href='peliculasPorGenero.html?id="+generos[i].id+"'>"+ generos[i].name +"</a>"
+          }
+        })
+        .catch(function(error){
+          console.log("El error fue:" + error)
+        })
   })

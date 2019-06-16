@@ -200,3 +200,31 @@ top: 8%;
 left: 17%;
 top: 36%;
 }
+
+
+#carrousel{
+  position: relative;
+}
+
+#carrouse2{
+  position: relative;
+}
+
+#carrouse3{
+  position: relative;
+}
+
+#maspopulares{
+  position: absolute;
+  left: -17%;
+}
+
+#proximosestrenos{
+  position: absolute;
+  left: -17%;
+}
+
+#mejorpuntuadas{
+  position: absolute;
+  left: -17%;
+}

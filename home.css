@@ -228,3 +228,44 @@ top: 36%;
   position: absolute;
   left: -17%;
 }
+
+@media only screen and (max-width: 420px){
+  header ul li {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      position: relative;
+    }
+
+    header ul li.home{
+      left: -11%;
+    }
+
+    header ul li.boton{
+      left: -16%;
+    }
+
+    header ul li.favoritos{
+      left: -19%;
+    }
+
+    header ul li.login{
+      left: -25%;
+    }
+
+    #bienvenida{
+      display: none;
+    }
+
+    header ul li.busca{
+      left: -17%;
+      
+    }
+
+    /* input.form-control{
+    width: 10%;
+    } */
+
+}

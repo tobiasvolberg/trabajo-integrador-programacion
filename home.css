@@ -261,11 +261,52 @@ top: 36%;
 
     header ul li.busca{
       left: -17%;
-      
+
     }
+
+    #logoTmdb {
+    height: 40px;
+    position: absolute;
+    left: 79%;
+    top: 29%;
+  }
 
     /* input.form-control{
     width: 10%;
     } */
+#Nombre {
+    width: 77%;
+    left: 20%;
+    top: 8%;
+  }
+  main {
+    height: 71vh;
+}
+
+#carruselhome {
+  float: left;
+  width: 82.5%;
+  margin-left: 17.5%;
+
+}
+
+#carruselhome2 {
+  float: left;
+  margin-left: 17.5%;
+  width: 82.5%;
+  margin-top: 1%;
+}
+
+#carruselhome3 {
+  float: left;
+  margin-left: 17.5%;
+  width: 82.5%;
+  margin-top: 1%;
+}
+
+footer{
+  bottom: -991px;
+}
+
 
 }

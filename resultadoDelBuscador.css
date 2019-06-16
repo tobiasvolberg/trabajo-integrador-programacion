@@ -187,5 +187,11 @@ p.uk-margin-remove:hover{
       width: 77%;
       left: 20%;
       top: 8%;
+    }
+
+    main {
+    margin-top: 19.8%;
+    height: 73.5vh;
+}
 
 }

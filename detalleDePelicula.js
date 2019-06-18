@@ -1,4 +1,20 @@
 window.addEventListener("load",function(){
+  // Obtengo la info de local storage
+    var json = localStorage.getItem("pelisFavoritos")
+
+    // Si ya habia favoritos..
+    if (json != null) {
+      // Desempaquetar el string JSON
+      var objLit = JSON.parse(json)
+
+      // De todo el objeto literal me interesa EL ARRAY
+      var favoritos = objLit.carac
+
+    } else {
+      // Si no habia creo el listado como VACIO
+      var favoritos = []
+    }
+
   fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=e213b0057b8f5a50ca80f34e219debc4&language=en-US")
   .then(function(respuesta) {
     return respuesta.json()

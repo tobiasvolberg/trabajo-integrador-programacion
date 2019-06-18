@@ -1,96 +1,47 @@
 window.addEventListener("load",function(){
-  // Obtengo la info de local storage
-    var json = localStorage.getItem("pelisFavoritos")
+  var favoritos = localStorage.getItem("favoritos")
+  favoritos = JSON.parse(favoritos).listadoFavoritos
 
-    // Si ya habia favoritos..
-    if (json != null) {
-      // Desempaquetar el string JSON
-      var objLit = JSON.parse(json)
+  var article = ""
+for (var i = 0; i < favoritos.length; i++) {
+console.log(favoritos);
 
-      // De todo el objeto literal me interesa EL ARRAY
-      var favoritos = objLit.carac
 
-    } else {
-      // Si no habia creo el listado como VACIO
-      var favoritos = []
-    }
-
+fetch( "https://api.themoviedb.org/3/movie/" + favoritos[i] + "?api_key=72c0f0e3c6590f5af907c8bd0778da1d&language=en-US")
+.then(function(respuesta) {
+  return respuesta.json()
+})
+.then(function(informacion) {
+  console.log(informacion);
 
 
 
-    for (var i = 0; i < favoritos.length; i++) {
-    var idPelis = favoritos[i]
+  var li =""
+  li = "<li class='peli-recomendada'>"
 
-    fetch("https://api.themoviedb.org/3/movie/"+idPelis+"?api_key=e213b0057b8f5a50ca80f34e219debc4&language=en-US")
-      .then(function(respuesta) {
-        return respuesta.json()
-      })
-      .then(function(pelicula) {
-        console.log(pelicula);
-        var li =""
-          li = "<li>"
-          li += "<img id='carrusel1' src='https://image.tmdb.org/t/p/w500/" +pelicula.poster_path +"'  uk-cover>"
-          li += "<div class='uk-position-bottom uk-position-medium uk-text-center uk-light'>"
-          li += "<a href='detalleDePelicula.html?id="+pelicula.id+"'>"
-          li += "<h3 class='uk-margin-remove'>" + pelicula.title + "</h3>"
-          li += "<p class='uk-margin-remove'>"+pelicula.overview+"</p>"
-          li += "</a>"
-          li += "</div>"
-          li += "</li>"
-        })
-    }
 
-      .catch(function(error){
-        console.log("El error fue:" + error)
-      })
+  li += "<img src='https://image.tmdb.org/t/p/w500/" +informacion.poster_path +"'  uk-cover>"
+  li += "<div class='uk-position-bottom uk-position-medium uk-text-center uk-light'>"
+  li += "<a href='detalleDePelicula.html?id="+informacion.id+"'>"
+  li += "<h3 class='uk-margin-remove'>" + informacion.title + "</h3>"
+  li += "<p class='uk-margin-remove'>"+informacion.overview+"</p>"
+  li += "</a>"
+  li += "</div>"
 
-      // Pregunto si la peli ya era favorito
-      if (favoritos.indexOf(id) == -1) {
-        // Si no era favorito digo "Queres agregarlo?"
-        // OJO QUE COMO HAY MUCHOS BOTONES EL BOTON TIENE UNA REFERENCIA DEL idGif
-        document.querySelector("div.botonesDetalle").innerHTML += "<button idPelis=" + id + " class='favorito' id='botoncitoFavoritos'>Agregar a Favoritos</button><br>"
-      } else {
-        // Si ya era, digo "Queres quitarlo?"
-        document.querySelector("div.botonesDetalle").innerHTML += "<button idPelis=" + id + " class='favorito' id='botoncitoFavoritos'>Quitar de Favoritos</button><br>"
-      }
+  li += "</li>"
 
-      // Ahora que ya los cree, obtengo todos los botones
-      var botones = document.querySelectorAll("button.favorito")
+  document.querySelector("#carruselhome ul").innerHTML += li
+            })
 
-      // Voy a recorrer esos botones
-      for (var i = 0; i < botones.length; i++) {
-        // A cada boton le pongo un evento onclick
-        botones[i].onclick = function() {
-          // Obtiene en que peli se clickeo
-          var idPelis = this.getAttribute("idPelis")
 
-          // Si le peli AUN NO ES FAVORITO
-          if (favoritos.indexOf(idPelis) == -1) {
-            // Lo agrega
-            favoritos.push(idPelis)
-            // Actualiza el boton
-            this.innerHTML = "Quitar de Favoritos"
-          } else {
-            // Lo quita
-            var posicion = favoritos.indexOf(idPelis)
-            favoritos.splice(posicion,1)
-            // Actualiza el boton
-            this.innerHTML = "Agregar a Favoritos"
-          }
 
-          // Lo vuelvo a pasar a OBJ literal
 
-          obj = {
-            carac: favoritos
-          }
+        .catch(function(error) {
+        console.log("Error: " + error);
+          })
 
-          // LO transformo en JSON
-          json = JSON.stringify(obj)
+}
 
-          // Lo guardo en Local Storage
-          localStorage.setItem("pelisFavoritos", json)
-
-          console.log(localStorage);
 
         fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=e213b0057b8f5a50ca80f34e219debc4&language=en-US")
         .then(function(respuesta) {

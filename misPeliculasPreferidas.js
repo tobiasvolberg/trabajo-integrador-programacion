@@ -17,8 +17,7 @@ fetch( "https://api.themoviedb.org/3/movie/" + favoritos[i] + "?api_key=72c0f0e3
 
 
   var li =""
-  li = "<li class='peli-recomendada'>"
-
+  li = "<li>"
 
   li += "<img src='https://image.tmdb.org/t/p/w500/" +informacion.poster_path +"'  uk-cover>"
   li += "<div class='uk-position-bottom uk-position-medium uk-text-center uk-light'>"

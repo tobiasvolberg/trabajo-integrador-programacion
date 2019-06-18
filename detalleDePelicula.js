@@ -33,7 +33,7 @@ window.addEventListener("load",function(){
       li += generos[i].name + ", "
     }
     document.querySelector("li.generoDePeli ul").innerHTML += li
-    li += "</li>" 
+    li += "</li>"
 
   })
   .catch(function(error){
@@ -100,5 +100,6 @@ fetch("https://api.themoviedb.org/3/movie/"+query+"/videos?api_key=e213b0057b8f5
 .catch(function(error){
   console.log("El error fue:" + error)
 })
+
 
 })

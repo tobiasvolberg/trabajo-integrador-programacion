@@ -237,6 +237,12 @@ top: 52%;
 right: 46%;
 width: 26%;
 }
+#botoncitoFavoritos{
+  position: absolute;
+top: 60%;
+right: 46%;
+width: 26%;
+}
 #video{
   position: absolute;
   float: left;

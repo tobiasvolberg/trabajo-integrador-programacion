@@ -57,4 +57,26 @@ fetch( "https://api.themoviedb.org/3/movie/" + favoritos[i] + "?api_key=72c0f0e3
           console.log("El error fue:" + error)
         })
 
+        document.querySelector("form.buscadorr").onsubmit = function(e) {
+            var buscadorInput = document.querySelector("#buscadorrr")
+
+            if (buscadorInput.value.length <= 3) {
+              e.preventDefault()
+              UIkit.notification({
+                message: 'Minimo 3 caracteres',
+                status: 'warning',
+                pos: 'top-center',
+                timeout: 3000,
+              })
+              // var myOwnInterval = setTimeInterval(tiempo, 3000)
+              // function tiempo() {
+              //   prompt("Minimo 3 caracteres")
+              // }
+              // clearTimeInterval(myOwnInterval)
+            }
+
+        }
+
+
+
   })

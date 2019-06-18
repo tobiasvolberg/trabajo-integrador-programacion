@@ -44,7 +44,7 @@ window.addEventListener("load",function(){
 
     li = "<li>"
     for (var i = 0; i < generos.length; i++) {
-      li += generos[i].name + ", "
+      li += generos[i].name + " "
     }
     document.querySelector("li.generoDePeli ul").innerHTML += li
     li += "</li>"

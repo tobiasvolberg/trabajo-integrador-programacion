@@ -120,11 +120,12 @@ document.querySelector("button.enviar-login").onclick = function() {
   var nombreDelUsuario = document.getElementById("Nombre").value
   console.log(nombreDelUsuario);
   if (nombreDelUsuario == "") {
-
+document.querySelector('#bienvenida').style.display = "none"
   }
   else {
     document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
     document.querySelector(".close").click()
+    document.querySelector("#botonLogIn").style.display="none"
 
     localStorage.setItem("userName", nombreDelUsuario)
 

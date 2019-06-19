@@ -50,6 +50,17 @@ header{
   position: absolute;
   left: 73%;
 }
+#Nombre{
+  width: 80%;
+left: 17%;
+top: 8%;
+}
+
+#Email{
+  width: 80%;
+left: 17%;
+top: 36%;
+}
 
 input.form-control{
   position: absolute;

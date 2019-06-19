@@ -83,7 +83,7 @@ width: 19%;
       border-top: 1px solid gainsboro;
       text-align: center;
       /* height: 200px; */
-      bottom: 0;
+      bottom: -17%;
       position: absolute;
       width: 100%;
 
@@ -124,7 +124,7 @@ width: 19%;
 
 
     article.verticalText {
-  writing-mode: vertical-rl;
+  /* writing-mode: vertical-rl; */
   text-orientation: upright;
   float: left;
   width: 10%;
@@ -162,18 +162,18 @@ li.li-menu{
 #carruselhome {
   float: left;
   width: 27.5%;
-  margin-left: 5.83333333%;
+  /* margin-left: 5.83333333%; */
 }
 
 #carruselhome2 {
   float: left;
-  margin-left: 5.83333333%;
+  margin-left: 8.75%;
   width: 27.5%;
 }
 
 #carruselhome3 {
   float: left;
-  margin-left: 5.83333333%;
+  margin-left: 8.75%;
   width: 27.5%;
 }
 
@@ -217,21 +217,33 @@ top: 36%;
   position: relative;
 }
 
-#maspopulares{
-  position: absolute;
-  left: -17%;
-}
+/* #maspopulares{ */
+  /* position: absolute; */
+  /* left: -17%; */
+/* } */
 
-#proximosestrenos{
+/* #proximosestrenos{ */
+  /* position: absolute; */
+  /* left: -17%; */
+/* } */
+article.puntuadas{
   position: absolute;
-  left: -17%;
+top: 15%;
+left: 37%;
+
+}
+article.estrenos{
+  position: absolute;
+top: 15%;
+left: 70%;
+
 }
 
 /* #mejorpuntuadas{
-  position: absolute;
-  left: 0%;
-  z-index: 999999;
-} */
+  /* position: absolute; */
+  /* left: -17%; */
+  /* z-index: 999999; */
+/* } */
 
 @media only screen and (max-width: 420px){
   header ul li {

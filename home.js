@@ -116,8 +116,8 @@ window.onload = function(){
 
 
 //LOGIN//
-function emailIsValid () {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test()
+function emailIsValid (e) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)
 }
 
 
@@ -135,13 +135,29 @@ document.querySelector("button.enviar-login").onclick = function(e) {
   }
   else if (nombreDelUsuario == "") {
     e.preventDefault()
-    alert("")
+    alert("Ingrese su nombre")
+  }else {
+    window.reload()
+    localStorage.setItem("userName", nombreDelUsuario )
   }
-
-
 
   console.log(nombreDelUsuario);
   console.log(email);
+
+  if (nombreDelUsuario == "") {
+document.querySelector('#bienvenida').style.display = "none"
+document.querySelector("#botonLogIn").style.display="block"
+document.querySelector('li.favoritos').style.display='none'
+
+  }
+  else {
+    document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + localStorage.getItem('userName')
+    document.querySelector(".close").click()
+    document.querySelector("#botonLogIn").style.display="none"
+    document.querySelector('li.favoritos').style.display='block'
+    // localStorage.setItem("userName", nombreDelUsuario)
+
+  }
 }
   // if (localStorage.getItem("userName") != null) {
   //   document.querySelector("#botonLogIn").style.display="block"
@@ -155,25 +171,9 @@ document.querySelector("button.enviar-login").onclick = function(e) {
   //
   //
   // }
-  var nombreDelUsuario = document.getElementById("Nombre").value
-
-  if (nombreDelUsuario == "") {
-document.querySelector('#bienvenida').style.display = "none"
-document.querySelector("#botonLogIn").style.display="block"
-document.querySelector('li.favoritos').style.display='none'
+  // var nombreDelUsuario = document.getElementById("Nombre").value
 
 
-  }
-  else {
-    document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
-    document.querySelector(".close").click()
-    document.querySelector("#botonLogIn").style.display="none"
-    document.querySelector('li.favoritos').style.display='block'
-
-
-    localStorage.setItem("userName", nombreDelUsuario)
-
-  }
 
 
 // if (localStorage.getItem("userName") != null) {

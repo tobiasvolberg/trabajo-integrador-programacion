@@ -116,9 +116,33 @@ window.onload = function(){
 
 
 //LOGIN//
-document.querySelector("button.enviar-login").onclick = function() {
+function emailIsValid () {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test()
+}
+
+
+document.querySelector("button.enviar-login").onclick = function(e) {
   var nombreDelUsuario = document.getElementById("Nombre").value
+  var email = document.getElementById("Email").value
+
+  if (emailIsValid(email)==false) {
+    e.preventDefault()
+    alert("Ingresa un email valido")
+  }
+  else if (email == "") {
+    e.preventDefault()
+    alert("Ingresa un email")
+  }
+  else if (nombreDelUsuario == "") {
+    e.preventDefault()
+    alert("")
+  }
+
+
+
   console.log(nombreDelUsuario);
+  console.log(email);
+}
   // if (localStorage.getItem("userName") != null) {
   //   document.querySelector("#botonLogIn").style.display="block"
   //   document.querySelector('#bienvenida').style.display = "none"
@@ -131,9 +155,12 @@ document.querySelector("button.enviar-login").onclick = function() {
   //
   //
   // }
+  var nombreDelUsuario = document.getElementById("Nombre").value
+
   if (nombreDelUsuario == "") {
 document.querySelector('#bienvenida').style.display = "none"
 document.querySelector("#botonLogIn").style.display="block"
+document.querySelector('li.favoritos').style.display='none'
 
 
   }
@@ -141,14 +168,19 @@ document.querySelector("#botonLogIn").style.display="block"
     document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
     document.querySelector(".close").click()
     document.querySelector("#botonLogIn").style.display="none"
+    document.querySelector('li.favoritos').style.display='block'
+
 
     localStorage.setItem("userName", nombreDelUsuario)
 
   }
 
-}
+
 // if (localStorage.getItem("userName") != null) {
 // document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + localStorage.getItem("userName")
+// }
+// else {
+//
 // }
 
 // if (localStorage.getItem("userName") != null) {

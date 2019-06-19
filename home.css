@@ -132,7 +132,7 @@ width: 19%;
 }
 article.carrousel{
   float: left;
-  width: 90%;
+  width: 100%;
 }
 
 li.li-menu{
@@ -226,7 +226,8 @@ top: 36%;
 
 #mejorpuntuadas{
   position: absolute;
-  left: -17%;
+  left: 0%;
+  z-index: 999999;
 }
 
 @media only screen and (max-width: 420px){

@@ -122,6 +122,7 @@ function emailIsValid (e) {
 
 
 document.querySelector("button.enviar-login").onclick = function(e) {
+  e.preventDefault()
   var nombreDelUsuario = document.getElementById("Nombre").value
   var email = document.getElementById("Email").value
 
@@ -137,8 +138,8 @@ document.querySelector("button.enviar-login").onclick = function(e) {
     e.preventDefault()
     alert("Ingrese su nombre")
   }else {
-    window.reload()
     localStorage.setItem("userName", nombreDelUsuario )
+    // window.reload()
   }
 
   console.log(nombreDelUsuario);

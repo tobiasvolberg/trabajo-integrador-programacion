@@ -1,4 +1,15 @@
 window.addEventListener("load",function(){
+
+  //jQuery
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('.modal-title').text('Inicia sesion ')
+    modal.find('.modal-body input').val(recipient)
+  })
   // Obtengo la info de local storage
     var favoritos = localStorage.getItem("favoritos")
 
@@ -174,6 +185,37 @@ document.querySelector("form.buscadorr").onsubmit = function(e) {
       // }
       // clearTimeInterval(myOwnInterval)
     }
+
+}
+document.querySelector("button.enviar-login").onclick = function() {
+  var nombreDelUsuario = document.getElementById("Nombre").value
+  console.log(nombreDelUsuario);
+  // if (localStorage.getItem("userName") != null) {
+  //   document.querySelector("#botonLogIn").style.display="block"
+  //   document.querySelector('#bienvenida').style.display = "none"
+  // }
+  // else {
+  //   document.querySelector("#botonLogIn").style.display="none"
+  //   document.querySelector('#bienvenida').style.display = "block"
+  //   document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
+  //
+  //
+  //
+  // }
+  if (nombreDelUsuario == "") {
+document.querySelector('#bienvenida').style.display = "none"
+document.querySelector("#botonLogIn").style.display="block"
+
+
+  }
+  else {
+    document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
+    document.querySelector(".close").click()
+    document.querySelector("#botonLogIn").style.display="none"
+
+    localStorage.setItem("userName", nombreDelUsuario)
+
+  }
 
 }
 

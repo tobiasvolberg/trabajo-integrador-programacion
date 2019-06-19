@@ -119,8 +119,23 @@ window.onload = function(){
 document.querySelector("button.enviar-login").onclick = function() {
   var nombreDelUsuario = document.getElementById("Nombre").value
   console.log(nombreDelUsuario);
+  // if (localStorage.getItem("userName") != null) {
+  //   document.querySelector("#botonLogIn").style.display="block"
+  //   document.querySelector('#bienvenida').style.display = "none"
+  // }
+  // else {
+  //   document.querySelector("#botonLogIn").style.display="none"
+  //   document.querySelector('#bienvenida').style.display = "block"
+  //   document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
+  //
+  //
+  //
+  // }
   if (nombreDelUsuario == "") {
 document.querySelector('#bienvenida').style.display = "none"
+document.querySelector("#botonLogIn").style.display="block"
+
+
   }
   else {
     document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
@@ -132,10 +147,13 @@ document.querySelector('#bienvenida').style.display = "none"
   }
 
 }
+// if (localStorage.getItem("userName") != null) {
+// document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + localStorage.getItem("userName")
+// }
 
-if (localStorage.getItem("userName") != null) {
-  document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + localStorage.getItem("userName")
-}
+// if (localStorage.getItem("userName") != null) {
+//   document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + localStorage.getItem("userName")
+// }
 
 document.querySelector("form.buscadorr").onsubmit = function(e) {
     var buscadorInput = document.querySelector("#buscadorrr")

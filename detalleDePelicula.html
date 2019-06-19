@@ -42,6 +42,8 @@
 
 
         </li>
+
+        <li id="bienvenida"></li>
         <!-- <li class="LogIn"><a href="#LogIn">Log in</a></li> -->
         <li class="busca">
           <div class="md-form active-cyan active-cyan-2 mb-3">
@@ -55,7 +57,7 @@
       </ul>
     </header>
     <main>
-      <section class="modalLogIn">
+      <section class="modalLogIn" id="busca">
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -69,11 +71,11 @@
                 <form>
                   <div class="form-group">
                     <label for="nombre" class="col-form-label">Nombre:</label>
-                    <textarea class="form-control" id="Nombre"></textarea>
+                    <input class="form-control" id="Nombre"></input>
                   </div>
                   <div class="form-group">
                     <label for="Email" class="col-form-label">Email:</label>
-                    <textarea class="form-control" id="Email"></textarea>
+                    <input class="form-control" id="Email"></input>
                   </div>
                   <div class="form-group">
                     <label for="genero" class="col-form-label">Genero:</label>
@@ -85,7 +87,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary enviar-login">Enviar</button>
               </div>
             </div>
           </div>

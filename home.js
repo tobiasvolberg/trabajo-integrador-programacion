@@ -114,7 +114,7 @@ window.onload = function(){
   if (localStorage.getItem("usuario")!=null) {
     document.querySelector("#botonLogIn").style.display="none"
     document.querySelector("li.favoritos").style.display="block"
-    var usuario = document.querySelector("li.favoritos")
+    var usuario = document.querySelector("#bienvenida")
     usuario.innerHTML = "Bienvenido " + localStorage.getItem("usuario")
 
   }
@@ -158,7 +158,7 @@ e.preventDefault()
     localStorage.setItem('usuario', nombre.value)
     document.querySelector("#botonLogIn").style.display = "none"
     document.querySelector("li.favoritos").style.display="block"
-    var usuario = document.querySelector(".li.favoritos")
+    var usuario = document.querySelector("#bienvenida")
     usuario.innerHTML = "Bienvenido " + localStorage.getItem("usuario")
   }
 }

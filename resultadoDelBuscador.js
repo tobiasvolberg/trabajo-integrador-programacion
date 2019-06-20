@@ -11,7 +11,7 @@ window.addEventListener("load",function(){
     modal.find('.modal-body input').val(recipient)
   })
 
-  
+
   fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=e213b0057b8f5a50ca80f34e219debc4&language=en-US")
   .then(function(respuesta) {
     return respuesta.json()
@@ -83,36 +83,88 @@ window.addEventListener("load",function(){
   }
 
 
-  document.querySelector("button.enviar-login").onclick = function() {
-    var nombreDelUsuario = document.getElementById("Nombre").value
-    console.log(nombreDelUsuario);
-    // if (localStorage.getItem("userName") != null) {
-    //   document.querySelector("#botonLogIn").style.display="block"
-    //   document.querySelector('#bienvenida').style.display = "none"
-    // }
-    // else {
-    //   document.querySelector("#botonLogIn").style.display="none"
-    //   document.querySelector('#bienvenida').style.display = "block"
-    //   document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
-    //
-    //
-    //
-    // }
-    if (nombreDelUsuario == "") {
-  document.querySelector('#bienvenida').style.display = "none"
-  document.querySelector("#botonLogIn").style.display="block"
+  // document.querySelector("button.enviar-login").onclick = function() {
+  //   var nombreDelUsuario = document.getElementById("Nombre").value
+  //   console.log(nombreDelUsuario);
+  //   // if (localStorage.getItem("userName") != null) {
+  //   //   document.querySelector("#botonLogIn").style.display="block"
+  //   //   document.querySelector('#bienvenida').style.display = "none"
+  //   // }
+  //   // else {
+  //   //   document.querySelector("#botonLogIn").style.display="none"
+  //   //   document.querySelector('#bienvenida').style.display = "block"
+  //   //   document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
+  //   //
+  //   //
+  //   //
+  //   // }
+  //   if (nombreDelUsuario == "") {
+  // document.querySelector('#bienvenida').style.display = "none"
+  // document.querySelector("#botonLogIn").style.display="block"
+  //
+  //
+  //   }
+  //   else {
+  //     document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
+  //     document.querySelector(".close").click()
+  //     document.querySelector("#botonLogIn").style.display="none"
+  //
+  //     localStorage.setItem("userName", nombreDelUsuario)
+  //
+  //   }
+  //
+  // }
+  //LogIn
+  if (localStorage.getItem("usuario")!=null) {
+    document.querySelector("#botonLogIn").style.display="none"
+    document.querySelector("li.favoritos").style.display="block"
+    var usuario = document.querySelector("#bienvenida")
+    usuario.innerHTML = "Bienvenido " + localStorage.getItem("usuario")
 
+  }
 
-    }
-    else {
-      document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
-      document.querySelector(".close").click()
-      document.querySelector("#botonLogIn").style.display="none"
+  var formulario = document.querySelector(".formularioDeLogIn")
+  var nombre = formulario.querySelector("input[name='nombre']")
+  var email = formulario.querySelector("input[name='email']")
+  var mailformat = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-      localStorage.setItem("userName", nombreDelUsuario)
-
-    }
-
+  formulario.onsubmit = function(e){
+  e.preventDefault()
+  if (nombre.value == "" && email.value.match(mailformat)== null) {
+  e.preventDefault()
+    UIkit.notification({
+      message: 'Por favor, completar los campos',
+      status: 'warning',
+      pos: 'top-right',
+      timout: 2000,
+    })
+  }
+  else if (nombre.value == "") {
+    e.preventDefault()
+    UIkit.notification({
+      message: 'Por favor, ingrese un nombre',
+      status: 'warning',
+      pos: 'top-right',
+      timout: 2000,
+    })
+  }
+  else if (email.value.match(mailformat)== null) {
+    e.preventDefault()
+    UIkit.notification({
+      message: 'Por favor, ingrese un email',
+      status: 'warning',
+      pos: 'top-right',
+      timout: 2000,
+    })
+  }
+  else {
+    e.preventDefault()
+    localStorage.setItem('usuario', nombre.value)
+    document.querySelector("#botonLogIn").style.display = "none"
+    document.querySelector("li.favoritos").style.display="block"
+    var usuario = document.querySelector("#bienvenida")
+    usuario.innerHTML = "Bienvenido " + localStorage.getItem("usuario")
+  }
   }
 
 })

@@ -34,6 +34,9 @@ header ul li{
     text-decoration: none;
 
 }
+header ul li.favoritos{
+  display: none;
+}
 
 
 

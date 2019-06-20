@@ -219,5 +219,56 @@ document.querySelector("#botonLogIn").style.display="block"
 
 }
 
+//LogIn
+if (localStorage.getItem("usuario")!=null) {
+  document.querySelector("#botonLogIn").style.display="none"
+  document.querySelector("li.favoritos").style.display="block"
+  var usuario = document.querySelector("#bienvenida")
+  usuario.innerHTML = "Bienvenido " + localStorage.getItem("usuario")
 
+}
+
+var formulario = document.querySelector(".formularioDeLogIn")
+var nombre = formulario.querySelector("input[name='nombre']")
+var email = formulario.querySelector("input[name='email']")
+var mailformat = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+formulario.onsubmit = function(e){
+e.preventDefault()
+if (nombre.value == "" && email.value.match(mailformat)== null) {
+e.preventDefault()
+  UIkit.notification({
+    message: 'Por favor, completar los campos',
+    status: 'warning',
+    pos: 'top-right',
+    timout: 2000,
+  })
+}
+else if (nombre.value == "") {
+  e.preventDefault()
+  UIkit.notification({
+    message: 'Por favor, ingrese un nombre',
+    status: 'warning',
+    pos: 'top-right',
+    timout: 2000,
+  })
+}
+else if (email.value.match(mailformat)== null) {
+  e.preventDefault()
+  UIkit.notification({
+    message: 'Por favor, ingrese un email',
+    status: 'warning',
+    pos: 'top-right',
+    timout: 2000,
+  })
+}
+else {
+  e.preventDefault()
+  localStorage.setItem('usuario', nombre.value)
+  document.querySelector("#botonLogIn").style.display = "none"
+  document.querySelector("li.favoritos").style.display="block"
+  var usuario = document.querySelector("#bienvenida")
+  usuario.innerHTML = "Bienvenido " + localStorage.getItem("usuario")
+}
+}
 })

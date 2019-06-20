@@ -85,42 +85,42 @@ window.addEventListener("load",function(){
   }
 
 
-  document.querySelector("button.enviar-login").onclick = function() {
-    var nombreDelUsuario = document.getElementById("Nombre").value
-    console.log(nombreDelUsuario);
-    // if (localStorage.getItem("userName") != null) {
-    //   document.querySelector("#botonLogIn").style.display="block"
-    //   document.querySelector('#bienvenida').style.display = "none"
-    // }
-    // else {
-    //   document.querySelector("#botonLogIn").style.display="none"
-    //   document.querySelector('#bienvenida').style.display = "block"
-    //   document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
-    //
-    //
-    //
-    // }
-    if (nombreDelUsuario == "") {
-  document.querySelector('#bienvenida').style.display = "none"
-  document.querySelector("#botonLogIn").style.display="block"
-
-
-    }
-    else {
-      document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
-      document.querySelector(".close").click()
-      document.querySelector("#botonLogIn").style.display="none"
-
-      localStorage.setItem("userName", nombreDelUsuario)
-
-    }
-
-  }
+  // document.querySelector("button.enviar-login").onclick = function() {
+  //   var nombreDelUsuario = document.getElementById("Nombre").value
+  //   console.log(nombreDelUsuario);
+  //   // if (localStorage.getItem("userName") != null) {
+  //   //   document.querySelector("#botonLogIn").style.display="block"
+  //   //   document.querySelector('#bienvenida').style.display = "none"
+  //   // }
+  //   // else {
+  //   //   document.querySelector("#botonLogIn").style.display="none"
+  //   //   document.querySelector('#bienvenida').style.display = "block"
+  //   //   document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
+  //   //
+  //   //
+  //   //
+  //   // }
+  //   if (nombreDelUsuario == "") {
+  // document.querySelector('#bienvenida').style.display = "none"
+  // document.querySelector("#botonLogIn").style.display="block"
+  //
+  //
+  //   }
+  //   else {
+  //     document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
+  //     document.querySelector(".close").click()
+  //     document.querySelector("#botonLogIn").style.display="none"
+  //
+  //     localStorage.setItem("userName", nombreDelUsuario)
+  //
+  //   }
+  //
+  // }
   //LogIn
   if (localStorage.getItem("usuario")!=null) {
     document.querySelector("#botonLogIn").style.display="none"
     document.querySelector("li.favoritos").style.display="block"
-    var usuario = document.querySelector("li.favoritos")
+    var usuario = document.querySelector("#bienvenida")
     usuario.innerHTML = "Bienvenido " + localStorage.getItem("usuario")
 
   }
@@ -164,7 +164,7 @@ window.addEventListener("load",function(){
     localStorage.setItem('usuario', nombre.value)
     document.querySelector("#botonLogIn").style.display = "none"
     document.querySelector("li.favoritos").style.display="block"
-    var usuario = document.querySelector(".li.favoritos")
+    var usuario = document.querySelector("#bienvenida")
     usuario.innerHTML = "Bienvenido " + localStorage.getItem("usuario")
   }
   }

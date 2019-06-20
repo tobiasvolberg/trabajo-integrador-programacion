@@ -380,8 +380,10 @@ max-width: 25%;
 } */
 
 
-
-
+.aaa{
+  border-style: solid;
+  border-width: 10px;
+}
 
 
 

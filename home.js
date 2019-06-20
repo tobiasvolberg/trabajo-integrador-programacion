@@ -116,80 +116,80 @@ window.onload = function(){
 
 
 //LOGIN//
-function emailIsValid (e) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)
-}
-
-
-document.querySelector("button.enviar-login").onclick = function(e) {
-  e.preventDefault()
-  var nombreDelUsuario = document.getElementById("Nombre").value
-  var email = document.getElementById("Email").value
-  console.log(nombreDelUsuario);
-  console.log(email);
-  if (nombreDelUsuario=="" && emailIsValid(email)==false) {
-e.preventDefault()
-UIkit.notification({
-  message: 'Por favor complete todos los campos',
-  status: 'warning',
-  pos: 'top-right',
-  timeout: 2000,
-})
-}
-else if (nombreDelUsuario=="") {
-  e.preventDefault()
-  UIkit.notification({
-    message: 'Por favor ingrese su nombre',
-    status: 'warning',
-    pos: 'top-right',
-    timeout: 2000,
-  })
-}
-else if (emailIsValid(email)==false) {
-  e.preventDefault()
-  UIkit.notification({
-    message: 'Por favor ingrese su email',
-    status: 'warning',
-    pos: 'top-right',
-    timeout: 2000,
-  })
-}
-else {
-  e.preventDefault()
-  localStorage.setItem('userName', nombreDelUsuario)
-}
-  }
-
-  // if (emailIsValid(email)==false) {
-  //   e.preventDefault()
-  //   alert("Ingresa un email valido")
-  // }
-  //
-  // else if (nombreDelUsuario == "") {
-  //   e.preventDefault()
-  //   alert("Ingrese su nombre")
-  // }
-  // else {
-  //   // window.reload()
-  //   localStorage.setItem("userName", nombreDelUsuario )
-  // }
-
-
-  var nombreDelUsuario = document.getElementById("Nombre").value
-  if (nombreDelUsuario == "") {
-document.querySelector('#bienvenida').style.display = "none"
-document.querySelector("#botonLogIn").style.display="block"
-document.querySelector('li.favoritos').style.display='none'
-
-  }
-  else {
-    document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + localStorage.getItem('userName')
-    document.querySelector(".close").click()
-    document.querySelector("#botonLogIn").style.display="none"
-    document.querySelector('li.favoritos').style.display='block'
-    // localStorage.setItem("userName", nombreDelUsuario)
-
-  }
+// function emailIsValid (e) {
+//   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)
+// }
+//
+//
+// document.querySelector("button.enviar-login").onclick = function(e) {
+//   e.preventDefault()
+//   var nombreDelUsuario = document.getElementById("Nombre").value
+//   var email = document.getElementById("Email").value
+//   console.log(nombreDelUsuario);
+//   console.log(email);
+//   if (nombreDelUsuario=="" && emailIsValid(email)==false) {
+// e.preventDefault()
+// UIkit.notification({
+//   message: 'Por favor complete todos los campos',
+//   status: 'warning',
+//   pos: 'top-right',
+//   timeout: 2000,
+// })
+// }
+// else if (nombreDelUsuario=="") {
+//   e.preventDefault()
+//   UIkit.notification({
+//     message: 'Por favor ingrese su nombre',
+//     status: 'warning',
+//     pos: 'top-right',
+//     timeout: 2000,
+//   })
+// }
+// else if (emailIsValid(email)==false) {
+//   e.preventDefault()
+//   UIkit.notification({
+//     message: 'Por favor ingrese su email',
+//     status: 'warning',
+//     pos: 'top-right',
+//     timeout: 2000,
+//   })
+// }
+// else {
+//   e.preventDefault()
+//   sessionStorage.setItem('userName', nombreDelUsuario)
+// }
+//   }
+//
+//   // if (emailIsValid(email)==false) {
+//   //   e.preventDefault()
+//   //   alert("Ingresa un email valido")
+//   // }
+//   //
+//   // else if (nombreDelUsuario == "") {
+//   //   e.preventDefault()
+//   //   alert("Ingrese su nombre")
+//   // }
+//   // else {
+//   //   // window.reload()
+//   //   localStorage.setItem("userName", nombreDelUsuario )
+//   // }
+//
+//
+//   var nombreDelUsuario = document.getElementById("Nombre").value
+//   if (nombreDelUsuario == "") {
+// document.querySelector('#bienvenida').style.display = "none"
+// document.querySelector("#botonLogIn").style.display="block"
+// document.querySelector('li.favoritos').style.display='none'
+//
+//   }
+//   else {
+//     document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + sessionStorage.getItem('userName')
+//     document.querySelector(".close").click()
+//     document.querySelector("#botonLogIn").style.display="none"
+//     document.querySelector('li.favoritos').style.display='block'
+//     // localStorage.setItem("userName", nombreDelUsuario)
+//
+//   }
 
   // if (localStorage.getItem("userName") != null) {
   //   document.querySelector("#botonLogIn").style.display="block"

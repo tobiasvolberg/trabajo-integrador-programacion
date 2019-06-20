@@ -129,9 +129,10 @@ li.li-menu{
 }
 
 #botonLogIn{
-  position: absolute;
+  /* position: absolute;
   left: 69%;
-    top: 11%;
+    top: 11%; */
+    display: none;
 }
 
 #carruselhome {

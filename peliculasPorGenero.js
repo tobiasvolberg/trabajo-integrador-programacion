@@ -11,7 +11,7 @@ window.addEventListener("load",function(){
     modal.find('.modal-body input').val(recipient)
   })
 
-  
+
   var urlParams = new URLSearchParams(window.location.search);
 
   var query = urlParams.get('id');
@@ -44,7 +44,7 @@ window.addEventListener("load",function(){
     li = "<li>"
 
 
-    li += "<img id='carrusel1' src='https://image.tmdb.org/t/p/w500/" +titulo[i].poster_path +"'  uk-cover>"
+    li += "<img id='carrusel1' src='https://image.tmdb.org/t/p/w500/" +titulo[i].backdrop_path +"'  uk-cover>"
     li += "<div class='uk-position-bottom uk-position-medium uk-text-center uk-light'>"
     li += "<a href='detalleDePelicula.html?id="+titulo[i].id+"'>"
     li += "<h3 class='uk-margin-remove'>" + titulo[i].title + "</h3>"

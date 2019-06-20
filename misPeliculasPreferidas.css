@@ -61,6 +61,12 @@ top: 8%;
 left: 17%;
 top: 36%;
 }
+img.ayuda{
+  position: absolute;
+width: 63%;
+top: 19%;
+left: 36%;
+}
 
 input.form-control{
   position: absolute;

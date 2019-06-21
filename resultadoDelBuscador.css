@@ -244,4 +244,24 @@ header ul li.favoritos{
   left: -9%;
 }
 
+article.busqueda{
+  font-size: 23px;
+color: white;
+border-color: black;
+width: 56%;
+position: absolute;
+left: 23%;
+top: 10.4%;
+}
+
+p{
+  display: none;
+}
+
+#carruselhome{
+  width: 80.5%;
+  margin-left: 8.833333%;
+    margin-top: 11%;
+}
+
 }

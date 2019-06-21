@@ -66,7 +66,7 @@ window.addEventListener("load",function(){
                           } else {
                           document.querySelector(".botonesDetalle").innerHTML += "<button class='favorito btn btn-primary' id='botoncitoFavoritos' idPeli=" + query + ">Agregar a Favoritos</button><br>"
                           }
-                          
+
                           // IDEA: document.querySelector("section.detalle").innerHTML += "<img src=" + url + ">"
                           // Bien! Ya cree todos los botones (Ojo que igual ustedes van a tener uno solo). Entonces los obtengo con querySelectorAll
                           var boton = document.querySelector("button.favorito")
@@ -228,6 +228,7 @@ if (localStorage.getItem("usuario")!=null) {
   usuario.innerHTML = "Bienvenido " + localStorage.getItem("usuario")
 
 }
+
 
 
 var formulario = document.querySelector(".formularioDeLogIn")

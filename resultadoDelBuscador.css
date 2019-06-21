@@ -240,5 +240,8 @@ div.dropdown{
 position: relative;
 left: 33%;
 }
+header ul li.favoritos{
+  left: -9%;
+}
 
 }

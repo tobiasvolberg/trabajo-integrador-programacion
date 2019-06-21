@@ -178,6 +178,8 @@ li.li-menu{
 }
 
 
+
+
 section.primero{
   overflow: hidden;
   position: relative;
@@ -376,6 +378,10 @@ position: relative;
 left: -81%;
 max-width: 25%;
 } */
+
+p{
+  display: none;
+}
 
 
 .aaa{

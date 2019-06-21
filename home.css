@@ -284,23 +284,21 @@ padding-right: 4px;
 
     header ul li.favoritos{
       left: -19%;
-      display: none !important;
     }
 
     header ul li.login{
       left: -25%;
     }
 
-    #bienvenida{
-      display: none;
-    }
+
 
     header ul li.busca{
-      left: -17%;
+      left: -36%;
 
     }
-    #busca{
-      z-index: 1000000 !important;
+
+    #bienvenida{
+      left: -31%;
     }
 
     #logoTmdb {

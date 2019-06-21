@@ -149,6 +149,21 @@ p.uk-margin-remove:hover{
   background-color: rgba(112, 112, 112, 0.6);
 
 }
+article.nose{
+  background-color: #0069d9;
+border-style: solid;
+border-radius: 50px;
+font-size: 16px;
+color: white;
+border-color: black;
+width: 15%;
+position: absolute;
+left: 0.5%;
+top: 50%;
+text-align: center;
+font-weight: bold;
+
+}
 
 
 @media only screen and (max-width: 420px){

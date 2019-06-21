@@ -27,6 +27,7 @@ window.addEventListener("load",function(){
     for (var i = 0; i < generos.length; i++) {
       document.querySelector(".dropdown-menu").innerHTML += "<a class='dropdown-item' href='peliculasPorGenero.html?id="+generos[i].id+"'>"+ generos[i].name +"</a>"
     }
+
   })
   .catch(function(error){
     console.log("El error fue:" + error)
@@ -39,6 +40,7 @@ window.addEventListener("load",function(){
   .then(function(info) {
   var titulo = info.results
   console.log(titulo);
+
 
   for (var i = 0; i < titulo.length; i++) {
     li = "<li>"
@@ -56,12 +58,33 @@ window.addEventListener("load",function(){
     document.querySelector("#carruselhome ul").innerHTML += li
 
     // document.querySelector("#carruselhome ul").innerHTML += '<li><img src="' +"https://image.tmdb.org/t/p/w500/" +titulo[i].backdrop_path +'" alt="" uk-cover><div class="uk-position-bottom uk-position-medium uk-text-center uk-light"><h3 class="uk-margin-remove">' + titulo[i].title + '</h3><p class="uk-margin-remove">'+titulo[i].overview+'</p></div></li>'
+
   }
 
   })
   .catch(function(error){
     console.log("El error fue:" + error)
   })
+  fetch ("https://api.themoviedb.org/3/genre/movie/list?api_key=e213b0057b8f5a50ca80f34e219debc4&language=en-US")
+.then(function(response) {
+  return response.json();
+  console.log(response);
+})
+.then(function(data) {
+  console.log(data);
+  console.log(data.genres);
+// remplazo el id por el nombre del genero
+var unGenero = data.genres
+  for (var i = 0; i < unGenero.length; i++) {
+    if (unGenero[i].id==query) {
+      document.querySelector(".nose").innerText = "Buscaste " +unGenero[i].name
+    }
+
+  }
+})
+.catch(function(error) {
+console.log('Hubo un problema con la petición Fetch:' + error.message);
+})
 
 
   document.querySelector("form.buscadorr").onsubmit = function(e) {

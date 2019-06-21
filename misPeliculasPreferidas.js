@@ -152,13 +152,7 @@ fetch( "https://api.themoviedb.org/3/movie/" + favoritos[i] + "?api_key=72c0f0e3
         }
       }
 
-      if (localStorage.getItem("usuario")==null) {
-        document.querySelector("#botoncitoFavoritos").style.display = "none"
-      }
-      else {
-        document.querySelector("#botoncitoFavoritos").style.display = "block"
-
-      }
+      
 
 
 

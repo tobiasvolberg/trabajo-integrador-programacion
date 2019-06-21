@@ -147,7 +147,7 @@ e.preventDefault()
   else if (email.value.match(mailformat)== null) {
     e.preventDefault()
     UIkit.notification({
-      message: 'Por favor, ingrese un email',
+      message: 'Por favor, ingrese un email valido',
       status: 'warning',
       pos: 'top-right',
       timout: 2000,

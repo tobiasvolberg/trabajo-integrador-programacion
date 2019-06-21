@@ -397,4 +397,100 @@ width: 26%;
     top: 21%;
     width: 232%;
 }
+
+.imagenDetalleDePeli{
+  width: 54%;
+    position: absolute;
+      height: 45%;
+    float: left;
+    left: 2%;
+    top: 10.5%;
+}
+
+#botoncito {
+    position: absolute;
+    top: 11%;
+    right: 3%;
+    width: 39%;
+    font-size: 17px;
+}
+
+#botoncitoFavoritos {
+    position: absolute;
+    top: 22%;
+    right: 3%;
+    width: 39%;
+    font-size: 17px;
+}
+
+.estrenoDePeli {
+    position: absolute;
+    float: left;
+    left: 59%;
+    top: 36%;
+    width: 35%;
+}
+
+.idiomaDePeli {
+    float: left;
+    position: absolute;
+    left: 59%;
+    top: 32.5%;
+}
+
+.generosUl {
+    left: 258%;
+    top: 85%;
+    background: inherit;
+    position: absolute;
+    text-align: center;
+}
+
+.overviewDePeli {
+    float: left;
+    position: absolute;
+    left: 5%;
+    top: 62%;
+    width: 92%;
+}
+
+.tituloDetalleDePeli {
+    float: left;
+    left: 5%;
+    top: 57%;
+    position: absolute;
+    font-weight: bold;
+}
+
+footer{
+  bottom: -54%;
+}
+
+#video {
+    position: absolute;
+    float: left;
+    left: 2%;
+    top: 97%;
+    width: 96%;
+}
+
+#modaldetalledetalle {
+    width: 95%;
+    
+    z-index: 1;
+    height: 28.9%;
+        bottom: -33%;
+}
+
+p.uk-margin-remove{
+  display: none;
+}
+
+#testtest {
+    width: 105%;
+    left: -2%;
+    margin: 0 auto;
+    z-index: 0;
+}
+
 }

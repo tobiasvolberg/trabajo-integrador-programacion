@@ -62,7 +62,7 @@ window.addEventListener("load",function(){
 
     if (favoritos.indexOf(query) >= 0) {
 
-                          document.querySelector(".botonesDetalle").innerHTML += "<button class='favorito' id='botoncitoFavoritos' idPeli=" + query + ">Quitar de Favoritos</button><br>"
+                          document.querySelector(".botonesDetalle").innerHTML += "<button class='favorito btn btn-primary' id='botoncitoFavoritos' idPeli=" + query + ">Quitar de Favoritos</button><br>"
                           } else {
                           document.querySelector(".botonesDetalle").innerHTML += "<button class='favorito btn btn-primary' id='botoncitoFavoritos' idPeli=" + query + ">Agregar a Favoritos</button><br>"
                           }

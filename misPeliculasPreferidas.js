@@ -17,6 +17,14 @@ window.addEventListener("load",function(){
   favoritos = JSON.parse(favoritos).listadoFavoritos
 
   var article = ""
+  if (favoritos.length==0) {
+    UIkit.notification({
+      message: 'No hay peliculas favoritas',
+      status: 'warning',
+      pos: 'top-center',
+      timeout: 2000,
+    })
+  }
 for (var i = 0; i < favoritos.length; i++) {
 console.log(favoritos);
 

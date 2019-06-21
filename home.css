@@ -403,7 +403,7 @@ section.primero {
     background-color: #0069d9;
     border-style: solid;
     border-radius: 50px;
-    font-size: 16px;
+    font-size: 15px;
     z-index: 1;
     width: 8.8%;
     height: 22%;
@@ -435,7 +435,7 @@ left: 27%;
 
 input.form-control{
   position: absolute;
-left: 2%;
+left: 385%;
 top: 21%;
 width: 519%;
 }
@@ -447,7 +447,7 @@ width: 519%;
     background-color: #0069d9;
     border-style: solid;
     border-radius: 50px;
-    font-size: 16px;
+    font-size: 15px;
     color: white;
     border-color: black;
     padding-right: 4px;
@@ -457,6 +457,12 @@ width: 519%;
 .aaa{
   border-style: solid;
   border-width: 10px;
+}
+
+#botonLogIn{
+  left: 51%;
+    top: 21%;
+    width: 232%;
 }
 
 

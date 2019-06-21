@@ -284,8 +284,9 @@ width: 26%;
 
 #spanspan{
   position: absolute;
-  left: 46%;
-  TOP: -4%;
+  
+      left: 98%;
+      TOP: -7%;
   z-index: 2;
   BACKGROUND-COLOR: white;
   color: black;

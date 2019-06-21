@@ -122,6 +122,7 @@ window.onload = function(){
   var formulario = document.querySelector(".formularioDeLogIn")
   var nombre = formulario.querySelector("input[name='nombre']")
   var email = formulario.querySelector("input[name='email']")
+  var gender = formulario.querySelector("input[name='gender']")
   var mailformat = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 formulario.onsubmit = function(e){
@@ -152,6 +153,7 @@ e.preventDefault()
       pos: 'top-right',
       timout: 2000,
     })
+    
   }
   else {
     e.preventDefault()

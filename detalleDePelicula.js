@@ -229,8 +229,6 @@ if (localStorage.getItem("usuario")!=null) {
 
 }
 
-
-
 var formulario = document.querySelector(".formularioDeLogIn")
 var nombre = formulario.querySelector("input[name='nombre']")
 var email = formulario.querySelector("input[name='email']")
@@ -259,7 +257,7 @@ else if (nombre.value == "") {
 else if (email.value.match(mailformat)== null) {
   e.preventDefault()
   UIkit.notification({
-    message: 'Por favor, ingrese un email',
+    message: 'Por favor, ingrese un email valido',
     status: 'warning',
     pos: 'top-right',
     timout: 2000,

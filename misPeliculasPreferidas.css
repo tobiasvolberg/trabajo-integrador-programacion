@@ -71,7 +71,7 @@ left: 36%;
 input.form-control{
   position: absolute;
 left: 80%;
-top: 11%;
+top: 17%;
 width: 19%;
 }
 .fa-search:before {
@@ -169,6 +169,8 @@ p.uk-margin-remove:hover{
 
     header ul li.home{
       left: -11%;
+      position: relative;
+bottom: -7px;
     }
 
     header ul li.boton{
@@ -177,6 +179,8 @@ p.uk-margin-remove:hover{
 
     header ul li.favoritos{
       left: -19%;
+      position: relative;
+bottom: -7px;
     }
 
     header ul li.login{
@@ -185,6 +189,8 @@ p.uk-margin-remove:hover{
 
     #bienvenida{
       display: none;
+      position: relative;
+bottom: -7px;
     }
 
     header ul li.busca{

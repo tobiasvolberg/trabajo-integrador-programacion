@@ -306,6 +306,47 @@ width: 26%;
       position: relative;
     }
 
+    .dropdown {
+      POSITION: relative;
+    left: 27%;
+    }
+
+    #bienvenida{
+      display: none;
+    }
+
+    .home{
+      display: none;
+    }
+
+    .favoritos{
+      position: relative;
+      bottom: -7px;
+      display: block;
+          left: -14%;
+    }
+
+    input.form-control{
+      position: absolute;
+    left: -237%;
+    top: 21%;
+    width: 519%;
+    }
+
+    #proximosestrenos {
+        position: absolute;
+        left: -17%;
+        bottom: 12%;
+        background-color: #0069d9;
+        border-style: solid;
+        border-radius: 50px;
+        font-size: 16px;
+        color: white;
+        border-color: black;
+        padding-right: 4px;
+        height: 55vh;
+    }
+
     header ul li.home{
       left: -11%;
     }

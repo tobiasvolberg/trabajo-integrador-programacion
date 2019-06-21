@@ -384,6 +384,35 @@ p{
 }
 
 
+#main{
+height: 210vh;
+}
+
+section.primero {
+    overflow: hidden;
+    position: relative;
+    height: 105%;
+    top: -1%;
+    left: 0%;
+}
+
+#mejorpuntuadas {
+    position: absolute;
+    left: 2.3%;
+    bottom: 41%;
+    background-color: #0069d9;
+    border-style: solid;
+    border-radius: 50px;
+    font-size: 16px;
+    z-index: 1;
+    width: 8.8%;
+    height: 22%;
+    z-index: 1;
+    color: white;
+    border-color: black;
+    padding-right: 4px;
+}
+
 .aaa{
   border-style: solid;
   border-width: 10px;

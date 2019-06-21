@@ -284,7 +284,7 @@ width: 26%;
 
 #spanspan{
   position: absolute;
-  
+
       left: 98%;
       TOP: -7%;
   z-index: 2;
@@ -329,9 +329,9 @@ width: 26%;
 
     input.form-control{
       position: absolute;
-    left: -237%;
-    top: 21%;
-    width: 519%;
+      left: 145%;
+      top: 21%;
+      width: 519%;
     }
 
     #proximosestrenos {
@@ -391,5 +391,10 @@ width: 26%;
     main {
     margin-top: 19.8%;
     height: 73.5vh;
+}
+#botonLogIn{
+  left: 206%;
+    top: 21%;
+    width: 232%;
 }
 }

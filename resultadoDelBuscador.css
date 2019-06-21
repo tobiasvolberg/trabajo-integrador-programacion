@@ -222,5 +222,23 @@ font-weight: bold;
     margin-top: 19.8%;
     height: 73.5vh;
 }
+input.form-control{
+  position: absolute;
+  left: 145%;
+  top: 21%;
+  width: 519%;
+}
+header ul li.home{
+  display: none;
+}
+#botonLogIn{
+  left: 206%;
+    top: 21%;
+    width: 232%;
+}
+div.dropdown{
+position: relative;
+left: 33%;
+}
 
 }

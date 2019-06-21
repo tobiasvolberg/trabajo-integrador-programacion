@@ -198,9 +198,9 @@ font-weight: bold;
 
     input.form-control{
       position: absolute;
-    left: -237%;
-    top: 21%;
-    width: 519%;
+      left: 145%;
+      top: 21%;
+      width: 519%;
     }
 
     #proximosestrenos {
@@ -259,5 +259,10 @@ font-weight: bold;
       main {
       margin-top: 19.8%;
       height: 73.5vh;
+  }
+  #botonLogIn{
+    left: 206%;
+      top: 21%;
+      width: 232%;
   }
 }

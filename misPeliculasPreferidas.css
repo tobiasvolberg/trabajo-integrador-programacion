@@ -234,7 +234,21 @@ bottom: -7px;
   p{
     display: none;
   }
-
+  header ul li.home{
+    display: none;
+  }
+  div.dropdown{
+    left: 25%;
+  }
+  header ul li.favoritos{
+    left: -10%;
+  }
+input.form-control{
+  position: absolute;
+    left: -170%;
+    top: 21%;
+    width: 419%;
+}
 
 
 }

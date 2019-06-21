@@ -99,37 +99,58 @@ fetch( "https://api.themoviedb.org/3/movie/" + favoritos[i] + "?api_key=72c0f0e3
 
         }
 
-        document.querySelector("button.enviar-login").onclick = function() {
-          var nombreDelUsuario = document.getElementById("Nombre").value
-          console.log(nombreDelUsuario);
-          // if (localStorage.getItem("userName") != null) {
-          //   document.querySelector("#botonLogIn").style.display="block"
-          //   document.querySelector('#bienvenida').style.display = "none"
-          // }
-          // else {
-          //   document.querySelector("#botonLogIn").style.display="none"
-          //   document.querySelector('#bienvenida').style.display = "block"
-          //   document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
-          //
-          //
-          //
-          // }
-          if (nombreDelUsuario == "") {
-        document.querySelector('#bienvenida').style.display = "none"
-        document.querySelector("#botonLogIn").style.display="block"
-
-
-          }
-          else {
-            document.querySelector('#bienvenida').innerHTML = "Bienvenido, " + nombreDelUsuario
-            document.querySelector(".close").click()
-            document.querySelector("#botonLogIn").style.display="none"
-
-            localStorage.setItem("userName", nombreDelUsuario)
-
-          }
+        //LogIn
+        if (localStorage.getItem("usuario")!=null) {
+          document.querySelector("#botonLogIn").style.display="none"
+          document.querySelector("li.favoritos").style.display="block"
+          var usuario = document.querySelector("#bienvenida")
+          usuario.innerHTML = "Bienvenido " + localStorage.getItem("usuario")
 
         }
+
+        var formulario = document.querySelector(".formularioDeLogIn")
+        var nombre = formulario.querySelector("input[name='nombre']")
+        var email = formulario.querySelector("input[name='email']")
+        var mailformat = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+      formulario.onsubmit = function(e){
+        e.preventDefault()
+        if (nombre.value == "" && email.value.match(mailformat)== null) {
+      e.preventDefault()
+          UIkit.notification({
+            message: 'Por favor, completar los campos',
+            status: 'warning',
+            pos: 'top-right',
+            timout: 2000,
+          })
+        }
+        else if (nombre.value == "") {
+          e.preventDefault()
+          UIkit.notification({
+            message: 'Por favor, ingrese un nombre',
+            status: 'warning',
+            pos: 'top-right',
+            timout: 2000,
+          })
+        }
+        else if (email.value.match(mailformat)== null) {
+          e.preventDefault()
+          UIkit.notification({
+            message: 'Por favor, ingrese un email',
+            status: 'warning',
+            pos: 'top-right',
+            timout: 2000,
+          })
+        }
+        else {
+          e.preventDefault()
+          localStorage.setItem('usuario', nombre.value)
+          document.querySelector("#botonLogIn").style.display = "none"
+          document.querySelector("li.favoritos").style.display="block"
+          var usuario = document.querySelector("#bienvenida")
+          usuario.innerHTML = "Bienvenido " + localStorage.getItem("usuario")
+        }
+      }
 
 
 

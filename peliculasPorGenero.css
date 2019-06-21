@@ -265,4 +265,27 @@ font-weight: bold;
       top: 21%;
       width: 232%;
   }
+
+  p{
+    display: none;
+  }
+
+#carruselhome{
+  float: left;
+width: 96%;
+position: relative;
+left: 2%;
+margin-top: 12%;
+}
+
+article.nose{
+  font-size: 22px;
+color: white;
+border-color: black;
+width: 88%;
+position: absolute;
+left: 6%;
+top: 11%;
+}
+
 }

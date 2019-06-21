@@ -63,9 +63,9 @@ top: 36%;
 }
 img.ayuda{
   position: absolute;
-      width: 90%;
-      top: 61%;
-      left: 5%;
+    width: 64%;
+    top: 18%;
+    left: 33%;
 }
 
 input.form-control{
@@ -143,8 +143,8 @@ li.li-menu{
 
 #carruselhome {
   float: left;
-  width: 58.5%;
-  margin-left: 18.833333%;
+      width: 26%;
+      margin-left: 1.833333%;
 }
 p.uk-margin-remove:hover{
   color: white;
@@ -166,6 +166,19 @@ p.uk-margin-remove:hover{
       text-decoration: none;
       position: relative;
 
+    }
+
+    img.ayuda{
+      position: absolute;
+          width: 90%;
+          top: 61%;
+          left: 5%;
+    }
+
+    #carruselhome {
+      float: left;
+      width: 58.5%;
+      margin-left: 18.833333%;
     }
 
     header ul li.home{

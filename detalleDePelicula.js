@@ -64,7 +64,7 @@ window.addEventListener("load",function(){
 
                           document.querySelector(".botonesDetalle").innerHTML += "<button class='favorito' id='botoncitoFavoritos' idPeli=" + query + ">Quitar de Favoritos</button><br>"
                           } else {
-                          document.querySelector(".botonesDetalle").innerHTML += "<button class='favorito' id='botoncitoFavoritos' idPeli=" + query + ">Agregar a Favoritos</button><br>"
+                          document.querySelector(".botonesDetalle").innerHTML += "<button class='favorito btn btn-primary' id='botoncitoFavoritos' idPeli=" + query + ">Agregar a Favoritos</button><br>"
                           }
                           console.log("hola");
                           // IDEA: document.querySelector("section.detalle").innerHTML += "<img src=" + url + ">"
